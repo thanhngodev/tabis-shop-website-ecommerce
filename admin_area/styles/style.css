@@ -1,0 +1,403 @@
+.vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+    overflow: auto;
+  }
+
+  .mess {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .mess small{
+    display: flex;
+    justify-content: center;
+    color: #f1f1f1;
+    font-weight: 500;
+  }
+  
+  .page-content {
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    transition: all 0.4s;
+  }
+  
+  /* for toggle behavior */
+  
+  #sidebar.active {
+    margin-left: -17rem;
+  }
+  
+  #content.active {
+    width: 100%;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    #sidebar {
+      margin-left: -17rem;
+    }
+    #sidebar.active {
+      margin-left: 0;
+    }
+    #content {
+      width: 100%;
+      margin: 0;
+    }
+    #content.active {
+      margin-left: 17rem;
+      width: calc(100% - 17rem);
+    }
+  }
+  
+  body {
+    background: #599fd9;
+    background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+    background: linear-gradient(to right, #599fd9, #c2e59c);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .none{
+    display: none !important;
+  }
+  
+  input:focus{
+    border: none;
+    outline: none;
+  }
+
+  .separator {
+    margin: 1rem 0;
+    border-bottom: 1px dashed #fff;
+  }
+  
+  .text-uppercase {
+    letter-spacing: 0.1em;
+  }
+  
+  .text-gray {
+    color: #aaa;
+  }
+  
+  .collapse-inner .collapse-header{
+    margin-left: 1.5rem;
+    color: rgba(0, 0, 0, 0.301) !important;
+  }
+
+  .collapse-inner .collapse-item{
+    display: block;
+    margin-left: 2.5rem;
+    padding: 0.5rem 0.3rem;
+    border-radius: 0.2rem;
+    transition: all .1s;
+    text-decoration: none;
+  }
+
+  .collapse-inner .collapse-item:hover{
+    background: #e2e3e4;
+  }
+
+  /*////////////////////////////////// LOGIN.PHP //////////////////////////////////////*/
+  .form-container{
+    position: absolute;
+    top: 15vh;
+    background-color: #fff;
+    width: 100%;
+    padding: 30px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+  }
+  .form-container h1{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .form-container button{
+    display: block;
+    margin: 0 auto;
+  }
+  .form-container input{
+    border: none !important;
+    border-bottom: 2px solid #599fd9 !important;
+  }
+  .form-control{
+    border-radius: 0 !important;
+  }
+  .form-container input:active,
+  .form-container input:focus {
+    box-shadow: none;
+  }
+  .form-group label{
+    font-weight: 500;
+  }
+
+  /*////////////////////////////////// INSERT_PRODUCT.PHP //////////////////////////////////////*/
+  .insert-form{
+    padding-left: 2rem;
+  }
+  .insert-form tr{
+    height: 3rem;
+  }
+  .insert-form tr td:first-child{
+    text-align: right;
+    padding-right: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .insert-form input,
+  .insert-form select,
+  .insert-form textarea{
+    padding: 0.3rem 0.3rem;
+    border-radius: 0.2rem;
+    border-width: 1px !important;
+    border-color: skyblue;
+  }
+  .insert-form input[name=name]{
+    width: 100%;
+  }
+  .insert-form input[name=quantity]{
+    width: 4rem;
+  }
+  .insert-form .action button{
+    width: 5rem;
+    margin: 2rem 1rem;
+  }
+  .preview{
+    padding-left: 2rem;
+  }
+  .preview td:first-child{
+    padding-right: 1rem;
+  }
+  .preview td{
+    padding: 0.5rem 0.3rem;
+    vertical-align: top;
+  }
+  .preview p{
+    font-weight: 500;
+    color: chocolate;
+  }
+  .col-sm-5{
+    border-left: 1px dashed #fff;
+  }
+  .row h3{
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .msg{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+    font-size: 1.3rem;
+    animation-name: fadeIn;
+    animation-duration: 10s;
+  }
+  @keyframes fadeIn {
+    0%  { opacity: 1;}
+    100%  { opacity: 0;}
+  }
+
+  /*////////////////////////////////// UPDATE.PHP //////////////////////////////////////*/
+
+  table.all-info{
+    width: 100%;
+
+  }
+  table.all-info tr{
+    border-bottom: 1px solid #fff;
+  }
+  table.all-info,
+  table.all-info th,
+  table.all-info td{
+    padding: 0.8rem 0.5rem;
+  }
+  .img-td{
+    width: 10rem;
+  }
+  .pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  /*////////////////////////////////// UPDATE.PHP //////////////////////////////////////*/
+
+  .category-manager .add-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #fff;
+  }
+  .category-manager .add-form label{
+    margin-right: 3rem;
+    font-weight: 600;
+  }
+  .category-manager .add-form input{
+    padding: 0.3rem;
+    border: none;
+    border-radius: 0.3rem;
+    margin-right: 2rem;
+  }
+  .category-manager .add-form button{
+    margin-bottom: 0.2rem;
+  }
+  .category-manager .table-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  /*////////////////////////////////// ACCOUNT.PHP //////////////////////////////////////*/
+
+  .outer{
+    display: flex;
+    justify-content: center;
+  }
+  .outer .left{
+    width: 13rem;
+    min-width: 10rem;
+  }
+  .outer .left img{
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  .right{
+    margin-left: 5rem;
+  }
+  .right table{
+    font-size: 1.2rem;
+  }
+  .right tr td:first-child{
+    min-width: 10rem;
+  }
+  .right table tr,
+  .right table td{
+    height: 4rem;
+  }
+  .right table input{
+    border: none;
+    background-color: whitesmoke;
+    padding: 0.3rem;
+    width: 30rem;
+    border-radius: 0.5rem;
+    color: #555;
+  }
+  .right table td:last-child{
+    text-align: center;
+    width: 3rem;
+  }
+  .right table i{
+    cursor: pointer;
+  }
+  .input-active{
+    color: #000 !important;
+    background-color: #fff !important;
+  }
+  .more .center{
+    display: flex;
+    justify-content: center;
+  }
+  .center .first, 
+  .center .second{
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    animation-name: fadeMove;
+    animation-duration: 1s;
+  }
+  .first input,
+  .second input{
+    border: none;
+    background-color: whitesmoke;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    margin-left: 2rem;
+  }
+  .second tr,
+  .second td{
+    height: 4rem;
+  }
+  .more button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+  .more small{
+    display: flex;
+    justify-content: center;
+  }
+  @keyframes fadeMove{
+    0% {
+      opacity: 0;
+      transform: translateX(-3rem);
+    }
+    75% {
+      opacity: 1;
+      transform: translateX(0.3rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+/*////////////////////////////////// BILL.PHP //////////////////////////////////////*/
+.bill table tr th:not(:last-child),
+.bill table tr td:not(:last-child){
+  min-width: 7rem;
+}
+.bill table{
+  width: 61rem;
+}
+.bill h3{
+  margin: 3rem 0;
+}
+.bill .blank{
+  padding: 3rem;
+  font-size: 1.1rem;
+}
+.bill-confirm .user-info table tr th:not(:last-child),
+.bill-confirm .user-info table tr td:not(:last-child){
+  min-width: 10rem;
+}
+.bill-confirm .bill-info table tr th:not(:last-child),
+.bill-confirm .bill-info table tr td:not(:last-child){
+  min-width: 18rem;
+}
+.bill-confirm h4{
+  margin: 3rem 0;
+}
+.bill-confirm table{
+  margin-bottom: 2rem;
+}
+
+/*////////////////////////////////// CUSTOMER.PHP //////////////////////////////////////*/
+.customers table{
+  width: 60rem;
+}
+
+/*////////////////////////////////// INDEX.PHP //////////////////////////////////////*/
+
+.statistic select{
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+.result{
+  display: flex;
+  justify-content: center;
+}
+.result table{
+  width: 50rem;
+}
+form .submit{
+  margin: 2rem;
+}

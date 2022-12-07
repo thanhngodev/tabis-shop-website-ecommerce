@@ -1,0 +1,5 @@
+<?php if (isset($_SESSION['success'])) : ?>
+        <?php 
+            phpalert($_SESSION['success']);
+        ?>
+<?php endif ?> 
